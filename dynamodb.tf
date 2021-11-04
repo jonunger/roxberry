@@ -4,7 +4,7 @@ resource "aws_dynamodb_table" "builddynamo" {
   read_capacity = 20
   write_capacity  = 20
   hash_key  = "customer_id"
-  range_key "last_name"
+  range_key = "last_name"
   
   attribute {
     name  = "customer_id"
