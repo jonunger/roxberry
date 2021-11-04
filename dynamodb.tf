@@ -15,14 +15,4 @@ resource "aws_dynamodb_table" "builddynamo" {
     name  = "last_name"
     type  = "S"
   }
-  
-  attribute {
-    name  = "first_name"
-    type  = "S"
-  }
-  
-  attribute {
-    name  = "email"
-    type  = "S"
-  }
 }
