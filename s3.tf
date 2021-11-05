@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "makebucket" {
+resource "aws_s3_bucket" "equitypricelog" {
   acl = "private"
-  bucket = "mybucketme303023440"
+  bucket = "rbequitypricelog"
 }
