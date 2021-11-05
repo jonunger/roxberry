@@ -16,6 +16,11 @@ resource "aws_dynamodb_table" "equity_price" {
     type  = "S"
   }
   
+  ttl {
+    attribute_name = "TimeToExist"
+    enabled = true
+  }
+  
   tags = {
     Name = "equity-price-table"
     Environment = "dev"
