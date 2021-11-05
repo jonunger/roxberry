@@ -1,18 +1,24 @@
-resource "aws_dynamodb_table" "builddynamo" {
-  name = "Customer"
+resource "aws_dynamodb_table" "equity_price" {
+  name = "EquityPrice"
   billing_mode = "PROVISIONED"
   read_capacity = 20
   write_capacity  = 20
-  hash_key  = "customer_id"
-  range_key = "last_name"
+  hash_key  = "symbol"
+  range_key = "time"
   
   attribute {
-    name  = "customer_id"
+    name  = "symbol"
     type  = "S"
   }
   
   attribute {
-    name  = "last_name"
+    name  = "time"
     type  = "S"
   }
+  
+  tags = {
+    Name = "equity-price-table"
+    Environment = "dev"
+  }
+    
 }
